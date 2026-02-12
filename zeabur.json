@@ -1,0 +1,27 @@
+{
+  "$schema": "https://zeabur.com/config.schema.json",
+  "name": "reading-club",
+  "region": "asia-east",
+  "builder": {
+    "type": "nixpacks",
+    "primaryOutputDir": ".next"
+  },
+  "container": {
+    "port": 3000,
+    "installCommand": "npm install",
+    "buildCommand": "npx prisma generate && npm run build",
+    "startCommand": "npm start"
+  },
+  "variables": {
+    "DATABASE_URL": "postgresql://...",
+    "NEXTAUTH_URL": "https://your-project.zeabur.app",
+    "NEXTAUTH_SECRET": "generate-a-secure-secret"
+  },
+  "services": [
+    {
+      "name": "web",
+      "port": 3000,
+      "env": ["DATABASE_URL", "NEXTAUTH_URL", "NEXTAUTH_SECRET", "SECONDME_CLIENT_ID", "SECONDME_CLIENT_SECRET", "SECONDME_REDIRECT_URI", "SECONDME_API_URL"]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "stage": "ready",
+  "app": {
+    "name": "读书会",
+    "description": "多人读书会应用，用户选书、配对讨论、输出读书笔记"
+  },
+  "api": {
+    "clientId": "b7c35d87-4b9e-47af-919c-048ee06e4f34",
+    "clientSecret": "705255886fd6fc61e50b2e98ca267fa5798fda3e469bf08c32630517c5a29dbb",
+    "redirectUri": "http://localhost:3000/api/auth/callback/secondme",
+    "baseUrl": "https://api.second.me",
+    "scopes": ["profile", "identity"]
+  },
+  "database": {
+    "type": "postgresql",
+    "url": ""
+  },
+  "modules": {
+    "auth": true,
+    "profile": true,
+    "chat": true,
+    "note": true
+  },
+  "prd": {
+    "target": "为读书爱好者提供选书、配对讨论、输出读书笔记的社交平台",
+    "users": "热爱阅读、喜欢交流思考的读书人",
+    "features": {
+      "matching": "系统自动分配配对，优先匹配未讨论过的用户，每月配对一次",
+      "books": "从外部数据库（豆瓣/OpenLibrary）选择书籍，用户投票决定每月8本书",
+      "discussion": "应用内实时对话讨论，存档备查",
+      "notes": "输出读书笔记，支持 Markdown/PDF 导出"
+    },
+    "design": {
+      "theme": "light",
+      "period": "monthly"
+    }
+  }
+}
