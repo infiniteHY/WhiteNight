@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const CLIENT_ID = 'b7c35d87-4b9e-47af-919c-048ee06e4f34'
 const CLIENT_SECRET = '705255886fd6fc61e50b2e98ca267fa5798fda3e469bf08c32630517c5a29dbb'
-const REDIRECT_URI = 'http://white-night-vert.vercel.app/api/auth/callback/secondme'
+const REDIRECT_URI = 'https://white-night-vert.vercel.app/api/auth/callback/secondme'
 const TOKEN_URL = 'https://app.mindos.com/gate/lab/api/oauth/token/code'
 const USERINFO_URL = 'https://app.mindos.com/gate/lab/api/secondme/user/info'
 
