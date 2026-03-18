@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 
 const AUTH_URL = 'https://go.second.me/oauth/'
 const CLIENT_ID = 'b7c35d87-4b9e-47af-919c-048ee06e4f34'
-const REDIRECT_URI = encodeURIComponent('http://white-night-vert.vercel.app/api/auth/callback/secondme')
+const REDIRECT_URI = encodeURIComponent('https://white-night-vert.vercel.app/api/auth/callback/secondme')
 
 function LoginForm() {
   const searchParams = useSearchParams()
